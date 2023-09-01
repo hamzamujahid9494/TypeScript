@@ -1,61 +1,47 @@
 "use strict";
-//assignment
-function sumoffirst(n) {
-    let sum = 0;
-    for (let i = 0; i <= 2 * n; i += 2) {
-        sum += i;
-    }
-    return sum;
-}
-console.log(sumoffirst(5));
+``; //assignment 
+const removenumber = (numbers) => {
+    return numbers.filter(num => num >= 0); //>=0 is condition greater than and equal to
+};
+const red = [12, -3, -6, 6];
+console.log(removenumber(red));
+//const removenumber=(numbers: number[]): number[] => {
+//return numbers.filter(num => num >= 0);}
 //2
-/*function printeven(numbers:Number[]):void {
-    for(const num of numbers){
-        if ( num % 2===0){console.log(num)}}
-    }
-    let numbers:number[]=[1,2,3,4,5,6,7,8,9];
-
-    printeven(numbers)*/
-function printEvenNumbers(numbers) {
-    for (const num of numbers) {
-        if (num % 2 === 0) {
-            console.log(num);
-        }
-    }
-}
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-printEvenNumbers(numbers); // Example: Printing even numbers from the array
+const mulitiply = (numbers) => {
+    return numbers.map(num => num * 2); // map is used to modify the pervious array
+};
+const num = [1, 23, 4, 7];
+console.log(mulitiply(num));
 //3
-function remove(numbers) {
-    return numbers.filter(num => num % 2 !== 0);
-}
-const orginal = [1, 2, 3, 4, 5, 6];
-const oddnumber = remove(orginal);
-console.log(oddnumber);
+const array = (strings) => {
+    return strings.filter(string => string.length < 5);
+};
+const fruits = ["apple", "bananana", "cherry", "date", "grape"];
+console.log(array(fruits));
 //4
-function calculate(radius) {
-    return Math.PI * radius * radius;
-}
-const radius = 3;
-const fire = calculate(radius);
-console.log(fire);
-//4
-const grades = [12, 34, 56, 67, 78, 89, 98];
-for (let i = grades.length - 1; i >= 0; i--) {
-    if (grades[i] < 50) {
-        grades.splice(i, 1);
-    }
-}
-console.log(grades);
+const nose = (numbers) => {
+    return numbers.filter(num => num % 2 == 0) //use both map and filter
+        .map(num => num * num);
+};
+const coun = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(nose(coun));
 //5
-function findlargest(numbers) {
-    let largest = numbers[0];
-    {
-        if (numbers > largest) {
-            largest = numbers;
-        }
-    }
-    return largest;
-}
-const number = [12, 23, 45, 67, 89, 98, 65];
-console.log(numbers);
+const temp = (numbers) => {
+    return numbers.map(num => num * 9 / 5 + 32);
+};
+const celsiu = [0, 10, 20, 30, 40];
+console.log(temp(celsiu));
+//6
+const coni = (numbers) => {
+    return numbers.filter(num => num % 2 !== 0)
+        .map(num => num * 2);
+};
+const odd = [1, 2, 3, 4, 5, 6, 7];
+console.log(coni(odd));
+//7
+const fore = (str) => {
+    return str.forEach(str => console.log(`${str}!`));
+};
+const names = ["alice", "bob", "charlie", "emily"];
+console.log(fore(names));
